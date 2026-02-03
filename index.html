@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Birthday | Futuristic Heaven Dream</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particle-bg"></div>
+    
+    <!-- Nebula Background -->
+    <div class="nebula"></div>
+    
+    <!-- Floating Stars -->
+    <div id="stars"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="hologram-logo">
+                    <span class="hologram-text">CELESTIAL</span>
+                    <span class="hologram-glow"></span>
+                </div>
+            </div>
+            
+            <div class="title-container">
+                <h1 class="main-title" id="mainTitle">
+                    <span class="title-text">HAPPY</span>
+                    <span class="title-glow"></span>
+                </h1>
+                <h2 class="sub-title">
+                    <span class="neon-text">BIRTHDAY</span>
+                    <span class="sub-glow"></span>
+                </h2>
+                <p class="tagline">A celestial celebration in the digital heavens</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Central Hologram Display -->
+            <div class="hologram-container">
+                <div class="hologram-ring outer"></div>
+                <div class="hologram-ring middle"></div>
+                <div class="hologram-ring inner"></div>
+                
+                <div class="hologram-content">
+                    <div class="avatar-placeholder">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-ring"></div>
+                        <i class="fas fa-crown avatar-icon"></i>
+                    </div>
+                    
+                    <div class="wish-display">
+                        <div class="typewriter-container">
+                            <p class="typewriter-text" id="dynamicMessage">
+                                Welcome to your celestial birthday celebration!
+                            </p>
+                            <div class="cursor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <div class="panel-section">
+                    <h3 class="panel-title"><i class="fas fa-user-astronaut"></i> PERSONALIZE</h3>
+                    <div class="input-group">
+                        <input type="text" id="nameInput" class="futuristic-input" placeholder="ENTER YOUR NAME...">
+                        <button id="activateBtn" class="cyber-button">
+                            <span class="cyber-text">ACTIVATE CELEBRATION</span>
+                            <span class="cyber-glow"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="panel-title"><i class="fas fa-gem"></i> BIRTHDAY WISHES</h3>
+                    <div class="wish-grid">
+                        <div class="wish-card" data-wish="1">
+                            <div class="wish-icon">🌟</div>
+                            <h4>STARDUST BLESSINGS</h4>
+                            <p>Cosmic prosperity</p>
+                        </div>
+                        <div class="wish-card" data-wish="2">
+                            <div class="wish-icon">⚡</div>
+                            <h4>ENERGY SURGE</h4>
+                            <p>Infinite vitality</p>
+                        </div>
+                        <div class="wish-card" data-wish="3">
+                            <div class="wish-icon">🌌</div>
+                            <h4>GALACTIC LOVE</h4>
+                            <p>Universal harmony</p>
+                        </div>
+                        <div class="wish-card" data-wish="4">
+                            <div class="wish-icon">💫</div>
+                            <h4>QUANTUM JOY</h4>
+                            <p>Digital happiness</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Elements -->
+            <div class="interactive-grid">
+                <div class="cyber-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-rocket"></i> LAUNCH CELEBRATION</h3>
+                    </div>
+                    <div class="card-body">
+                        <button id="confettiBtn" class="pulse-button">
+                            <i class="fas fa-fireworks"></i>
+                            <span>IGNITE CONFETTI</span>
+                        </button>
+                        <button id="laserBtn" class="pulse-button">
+                            <i class="fas fa-bolt"></i>
+                            <span>FIRE LASERS</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cyber-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-music"></i> SOUNDSCAPE</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="audio-controls">
+                            <button id="playBtn" class="audio-btn active">
+                                <i class="fas fa-play"></i> PLAY
+                            </button>
+                            <button id="pauseBtn" class="audio-btn">
+                                <i class="fas fa-pause"></i> PAUSE
+                            </button>
+                            <button id="nextBtn" class="audio-btn">
+                                <i class="fas fa-forward"></i> NEXT
+                            </button>
+                        </div>
+                        <div class="volume-slider">
+                            <input type="range" id="volume" min="0" max="100" value="70">
+                            <label for="volume">VOLUME</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cyber-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-heart"></i> SEND LOVE</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="love-meter">
+                            <div class="meter-bar" id="loveMeter">
+                                <div class="meter-fill"></div>
+                            </div>
+                            <div class="meter-text">
+                                <span id="loveCount">0</span> LOVE UNITS
+                            </div>
+                        </div>
+                        <button id="loveBtn" class="heart-button">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>TRANSMIT LOVE</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Celebration Counter -->
+            <div class="counter-section">
+                <div class="counter-display">
+                    <div class="counter-unit">
+                        <div class="counter-value" id="days">00</div>
+                        <div class="counter-label">DIGITAL DAYS</div>
+                    </div>
+                    <div class="counter-unit">
+                        <div class="counter-value" id="hours">00</div>
+                        <div class="counter-label">QUANTUM HOURS</div>
+                    </div>
+                    <div class="counter-unit">
+                        <div class="counter-value" id="minutes">00</div>
+                        <div class="counter-label">NANO MINUTES</div>
+                    </div>
+                    <div class="counter-unit">
+                        <div class="counter-value" id="seconds">00</div>
+                        <div class="counter-label">PICO SECONDS</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surprise Section -->
+            <div class="surprise-section">
+                <button id="surpriseBtn" class="surprise-button">
+                    <div class="button-content">
+                        <i class="fas fa-gem"></i>
+                        <span>ACCESS SECRET BIRTHDAY SURPRISE</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="button-glow"></div>
+                </button>
+                <div class="surprise-output" id="surpriseOutput">
+                    <!-- Surprise messages appear here -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SYSTEM STATUS</h4>
+                    <div class="status-indicators">
+                        <div class="status active">
+                            <span class="status-dot"></span>
+                            CELEBRATION ACTIVE
+                        </div>
+                        <div class="status">
+                            <span class="status-dot"></span>
+                            <span id="viewCount">1</span> UNIVERSAL VIEWS
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>TRANSMISSION CONTROLS</h4>
+                    <button id="shareBtn" class="footer-btn">
+                        <i class="fas fa-broadcast-tower"></i> BROADCAST
+                    </button>
+                    <button id="resetBtn" class="footer-btn">
+                        <i class="fas fa-redo"></i> RESET SIMULATION
+                    </button>
+                </div>
+                
+                <div class="footer-section">
+                    <div class="signature">
+                        <p>DESIGNED IN THE DIGITAL HEAVENS</p>
+                        <p class="glow-text">FOR YOUR CELESTIAL BIRTHDAY</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="bgMusic" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="laserSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-laser-weapon-shot-1671.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="confettiSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-explosion-2759.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-plastic-bubble-click-1124.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Confetti Container -->
+    <div id="confettiContainer"></div>
+    
+    <!-- Laser Container -->
+    <div id="laserContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+          </html>
